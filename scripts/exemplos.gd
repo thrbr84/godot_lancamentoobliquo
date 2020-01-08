@@ -33,7 +33,7 @@ func _ready():
 	prints('ANGLE:', _vector1.angle(), rad2deg(_vector1.angle()))
 	
 	
-	$icon.show()
+	#$icon.show()
 	$icon.global_position = posini
 	
 	
