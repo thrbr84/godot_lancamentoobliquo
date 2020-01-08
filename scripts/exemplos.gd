@@ -1,7 +1,7 @@
 extends Node2D
 
 var posini = Vector2(146, 600)
-var velocidade = Vector2(0, 0)
+var velocidade = Vector2(200, -200)
 
 func _ready():
 
@@ -42,6 +42,7 @@ func _physics_process(d):
 	var delta = 1 / 60.0
 	
 	velocidade.x += 0 * delta
+	velocidade.y += 98 * delta
 	#velocidade.y += 98 * delta # COM GRAVIDADE
 	
 	$icon.global_position += velocidade * delta
