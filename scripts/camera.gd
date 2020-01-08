@@ -1,19 +1,14 @@
 extends Camera2D
  
-var _duration = 0.0
-var _period_in_ms = 0.0
-var _amplitude = 0.0
-var _timer = 0.0
-var _last_shook_timer = 0
-var _previous_x = 0.0
-var _previous_y = 0.0
-var _last_offset = Vector2(0, 0)
- 
- 
-func _ready():
-	set_process(true)
- 
- 
+var _duration:float = 0.0
+var _period_in_ms:float = 0.0
+var _amplitude:float = 0.0
+var _timer:float = 0.0
+var _last_shook_timer:int = 0
+var _previous_x:float = 0.0
+var _previous_y:float = 0.0
+var _last_offset:Vector2 = Vector2.ZERO
+
 # Shake with decreasing intensity while there's time remaining.
 func _process(delta):
 	# Only shake when there's shake time remaining.
@@ -44,7 +39,6 @@ func _process(delta):
 	if _timer <= 0:
 		_timer = 0
 		set_offset(get_offset() - _last_offset)
- 
  
 # Kick off a new screenshake effect.
 func shake(duration, frequency, amplitude):

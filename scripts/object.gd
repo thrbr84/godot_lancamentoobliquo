@@ -63,7 +63,6 @@ func _on_checkCollision_body_entered(body):
 		#if body.is_in_group("floor"): 
 		emit_signal("collide", distanceForce)
 
-
 func _on_object_sleeping_state_changed():
 	#EN: If all velocity stop, then free
 	#PT: Se parar o movimento por completo então remove
